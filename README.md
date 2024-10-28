@@ -1,5 +1,6 @@
-# Cloudflare worker with QuickJS and Emscripten
+# Cloudflare worker with QuickJS and Emscripten + quickjs-emscripten-sync
 
-[tutorial](https://www.developermindset.com/cloudflare-workers-quickjs-wasm-and-emscripten/)
-
-![demo](./docs/demo.png)
+start demo:
+```
+yarn dev
+```
