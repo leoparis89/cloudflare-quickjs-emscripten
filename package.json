@@ -13,7 +13,8 @@
   "dependencies": {
     "@jitl/quickjs-singlefile-cjs-release-sync": "^0.26.0",
     "miniflare": "^3.20231218.2",
-    "quickjs-emscripten": "^0.26.0"
+    "quickjs-emscripten": "^0.26.0",
+    "quickjs-emscripten-sync": "^1.5.2"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240117.0",
