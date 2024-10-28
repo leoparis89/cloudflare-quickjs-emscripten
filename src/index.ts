@@ -1,5 +1,3 @@
-import { shouldInterruptAfterDeadline } from "quickjs-emscripten";
-
 import type { QuickJSWASMModule } from "quickjs-emscripten";
 import { Arena } from "quickjs-emscripten-sync";
 import {
@@ -55,6 +53,7 @@ const serverResponse = async (event: FetchEvent) => {
   const exposed = {
     rewritter: new HTMLRewriter(),
     input,
+    handle: () => {}, // This can't be called
   };
 
   arena.expose(exposed);
@@ -62,6 +61,8 @@ const serverResponse = async (event: FetchEvent) => {
   arena.evalCode(`
     // This works
     onResult("result");
+    handle(); // fails with Maximum call stack size exceeded
+
 
     class ElementHandler {
       async element(element) {
